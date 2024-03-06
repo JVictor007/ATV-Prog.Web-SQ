@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saque</title>
+</head>
+<body>
+    <p> Sacar <input type="number" id="Sacar"></p>
+    <p> Saldo <input type="number" id="Saldo" readonly placeholder="Saldo"></p>
+    <button type="button" id="Button" onclick="ObterDados()"> Fazer o Saque </button>
+    <script>
+        let Valor = window.prompt ("Digite o valor do seu saldo");
+        parseFloat(document.getElementById("Saldo").value = Valor);
+        function ObterDados() {
+        let Saque = parseFloat(document.getElementById("Sacar").value);
+        if (Saque <= Valor) {
+        Valor = parseFloat(Valor) - parseFloat(Saque);
+        alert("Seu saldo e: "+ Valor);
+        }
+        else {
+            alert("Operacao nao pode ser realizada");
+        }
+        parseFloat(document.getElementById("Saldo").value = Valor);
+        }
+        alert(num1)
+    </script>  
+</body>
+</html>
